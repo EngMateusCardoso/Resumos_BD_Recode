@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "62282e7e289fafaf10ad3830"
+  },
+  "nome": "Anna",
+  "cpf": "23970731291",
+  "datacadastro": {
+    "$date": "2022-03-09T04:35:10.571Z"
+  }
+},{
+  "_id": {
+    "$oid": "62282ec0289fafaf10ad3831"
+  },
+  "nome": "Mallu",
+  "cpf": "57626342135",
+  "endereco": {
+    "logradouro": "Estrada Teste 02"
+  },
+  "datacadastro": {
+    "$date": "2022-03-09T04:36:16.983Z"
+  }
+},{
+  "_id": {
+    "$oid": "6228c9864c787ef54b60c3f3"
+  },
+  "nome": "Mateus",
+  "cpf": "1234567890",
+  "endereco": {
+    "logradouro": "Pc St Cz",
+    "numero": 70
+  },
+  "datacadastro": {
+    "$date": "2022-03-09T15:36:38.305Z"
+  }
+}]

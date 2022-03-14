@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "6228d3f24c787ef54b60c3f4"
+  },
+  "pessoaId": {
+    "$oid": "62282e7e289fafaf10ad3830"
+  },
+  "dataultimavisita": {
+    "$date": "2022-03-09T16:21:06.578Z"
+  }
+},{
+  "_id": {
+    "$oid": "6228d4094c787ef54b60c3f5"
+  },
+  "pessoaId": {
+    "$oid": "62282ec0289fafaf10ad3831"
+  },
+  "dataultimavisita": {
+    "$date": "2022-03-09T16:21:29.174Z"
+  }
+},{
+  "_id": {
+    "$oid": "6228d4844c787ef54b60c3f6"
+  },
+  "pessoaId": {
+    "$oid": "6228c9864c787ef54b60c3f3"
+  },
+  "dataultimavisita": {
+    "$date": "2022-03-09T16:23:32.885Z"
+  }
+}]
