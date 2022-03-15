@@ -1,0 +1,40 @@
+Lembre se que para iniciar o mongo:
+Deve-se abrir no prompt de comando nas pasta do Arquivos de programa ou program files/MongoDB/Server/5.0/bin
+executa "mongod", depois "mongo".
+
+show dbs
+use cadastro
+db
+db.createUser({
+user:"admin",
+pwd:"123456",
+roles: ["readWrite", "dbAdmin"]
+});
+db.createCollection('pessoa');
+show collections;
+db.pessoa.insert({nome:"Anna",cpf:"23970731291",datacadastro:new Date()})
+db.pessoa.find().pretty();
+db.pessoa.insert({nome:"Mallu",cpf:"57626342135",
+endereco: {logradouro:"Estrada Teste 02"},datacadastro:new Date()})
+db.pessoa.insert({nome:"Ana",cpf:"19084287754",datacadastro:new Date()})
+db.pessoa.insert({nome:"Tania",cpf:"70734746881",
+endereco: {logradouro:"Av Teste 06",numero:127},datacadastro:new Date()})
+db.pessoa.find();
+db.pessoa.update({nome:"Tania"},
+{$set:{endereco:{logradouro:"Av Teste 06",numero:888}}});
+db.pessoa.update({_id:ObjectId("6217fa7c4accc324195fc092")},
+{$set:{endereco:{logradouro:"Av 06",numero:333}}})
+db.pessoa.find();
+db.pessoa.update({nome:"Anna"},{$set:{endereco:{logradouro:"Rua Dias da Cruz",numero:555}}});
+db.pessoa.find();
+db.pessoa.deleteOne( { nome: "Luiz" } );
+db.pessoa.find().pretty();
+db.createCollection('cliente');
+show collections;
+db.cliente.insert({pessoaId:db.pessoa.find()[0]._id,dataultimavisita:new Date()});
+db.cliente.insert({pessoaId:db.pessoa.find()[1]._id,dataultimavisita:new Date()});
+db.cliente.insert({pessoaId:db.pessoa.find()[2]._id,dataultimavisita:new Date()});
+db.cliente.insert({pessoaId:db.pessoa.find()[3]._id,dataultimavisita:new Date()});
+db.cliente.find().pretty();
+db.pessoa.find().sort({nome:1});
+db.pessoa.find().sort({nome:-1});
